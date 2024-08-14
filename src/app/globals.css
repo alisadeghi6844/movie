@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Estedad';
+  src: url('../assets/fonts/webfonts/statics/Estedad-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,18 +23,189 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+* {
+  margin: 0;
+  padding: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+body {
+  font-family: "Estedad", serif !important;
+  direction: rtl;
+  text-align: right;
 }
+
+.header {
+  border-radius: 20px;
+  border: 0.3px solid rgba(34, 142, 229, 0.19);
+  background: rgba(255, 255, 255, 0.2); /* رنگ پس‌زمینه شفاف */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* سایه */
+  backdrop-filter: blur(6px); /* افکت بلور */
+}
+
+
+.h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.h2 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.h6 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.notification .span {
+  font-size: 8px;
+  margin-top: 3px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/*date picker style*/
+.rmdp-container {
+  width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 16px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #959595;
+}
+
+.tooltip-content {
+  display: none;
+  transition: all 0.2s;
+  max-width: 100px;
+}
+
+.tooltip-content.top::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 10px;
+  height: 10px;
+  border-top: 10px solid #371f1f;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+.tooltip-content.bottom::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 10px;
+  height: 10px;
+  border-top: 10px solid transparent;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid #1f2937;
+}
+
+.tooltip-content.left::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: -5px;
+  transform: translateX(50%);
+  width: 10px;
+  height: 10px;
+  border-top: 10px solid transparent;
+  border-right: 6px solid transparent;
+  border-left: 6px solid #31371f;
+  border-bottom: 6px solid transparent;
+}
+
+.tooltip-content.right::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -17px;
+  transform: translateX(50%);
+  width: 10px;
+  height: 10px;
+  border-top: 10px solid transparent;
+  border-right: 6px solid #33371f;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+.tooltip-wrapper:hover .tooltip-content {
+  display: flex;
+}
+
+/*.slide-item {*/
+/*  transition: all 0.3s ease;*/
+/*  border-radius: 18px;*/
+/*}*/
+
+/*.slide-overlay {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*  background-color: rgba(0, 0, 0, 0.5);*/
+/*  transition: opacity 0.3s ease;*/
+/*  border-radius: 18px;*/
+/*}*/
+
+/*.swiper-slide-thumb-active .slide-overlay {*/
+/*  opacity: 0;*/
+/*  border-radius: 18px;*/
+/*}*/
+
+/*.swiper-slide-thumb-active {*/
+/*  border-radius: 18px;*/
+/*  z-index: 30;*/
+/*  transform: scale(1.2) !important;*/
+/*}*/
